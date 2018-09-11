@@ -26,11 +26,13 @@
             "required": true
         },
         "APP_DEBUG": {
-            "description": "Digite 'true'",
+            "description": "-",
+            "value": "true",
             "required": false
         },
         "APP_URL": {
-            "description": "Digite 'https://murphy.herokuapp.com/'",
+            "description": "-",
+            "value": "https://app-murphy.herokuapp.com/",
             "required": true
         },
         "LOG_CHANNEL": {
