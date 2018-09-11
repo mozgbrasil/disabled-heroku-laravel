@@ -76,7 +76,6 @@
             "value": "secret",
             "required": true
         },
-
         "BROADCAST_DRIVER": {
             "description": "-",
             "value": "log",
