@@ -33,7 +33,7 @@
         },
         "APP_URL": {
             "description": "-",
-            "value": "https://laravel-murphy.herokuapp.com/",
+            "value": "https://heroku-laravel-mozg.herokuapp.com/",
             "required": true
         },
         "LOG_CHANNEL": {
@@ -58,12 +58,12 @@
         },
         "DB_DATABASE": {
             "description": "-",
-            "value": "stack",
+            "value": "homestead",
             "required": true
         },
         "DB_USERNAME": {
             "description": "-",
-            "value": "homestead",
+            "value": "root",
             "required": true
         },
         "DB_PASSWORD": {

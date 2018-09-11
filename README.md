@@ -118,9 +118,35 @@ php artisan migrate
 
 ### Install
 
+composer require laravel/socialite
+
+###  Configure
+
+https://laravel.com/docs/5.7/socialite#configuration
+
+### Install
+
+composer require beyondcode/laravel-self-diagnosis
+
+### Usage
+
+php artisan self-diagnosis
+
+### Install
+
+composer require beyondcode/laravel-view-xray --dev
+
+### If you are using Laravel 5.5+, the package will automatically register the service provider for you.
+### By default, the package will automatically detect all models in your app directory that extend the Eloquent Model class. If you would like you explicitly define where your models are located, you can publish the configuration file using the following command.
+### Publish assets and config
+
+php artisan vendor:publish --provider=BeyondCode\\ViewXray\\ViewXrayServiceProvider
+
+### Install
+
 composer require barryvdh/laravel-debugbar --dev
 
-### Then run these commands to publish assets and config
+### Publish assets and config
 
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 
@@ -128,7 +154,7 @@ php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
 
 composer require encore/laravel-admin
 
-### Then run these commands to publish assets and config
+### Publish assets and config
 
 php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
 
@@ -138,11 +164,15 @@ php artisan admin:install
 
 ### Install
 
-composer require laravel/socialite
+composer require beyondcode/laravel-inline-translation --dev
 
-###  Configure
+### Install
 
-https://laravel.com/docs/5.7/socialite#configuration
+composer require encore/redis-manager
+
+### Publish assets and config
+
+php artisan vendor:publish --provider="Encore\RedisManager\RedisManagerServiceProvider"
 
 
 ## npm
@@ -152,6 +182,16 @@ npm install
 npm run dev
 
 ```
+
+A seguir alguns controles
+
+http://heroku-laravel-mozg.herokuapp.com/
+
+http://heroku-laravel-mozg.herokuapp.com/admin/
+
+    admin / admin
+
+http://heroku-laravel-mozg.herokuapp.com/redis-manager/
 
 ## Sobre o aplicativo para o Heroku
 
@@ -196,6 +236,8 @@ https://laravel.com/
 
 https://laracasts.com/series/laravel-from-scratch-2017
 
+https://github.com/chiraggude/awesome-laravel#awesome-laravel--
+
 ## Especificações técnicas
 
 * [Heroku](https://www.heroku.com/)
@@ -205,12 +247,15 @@ https://laracasts.com/series/laravel-from-scratch-2017
 * [Laravel](http://laravel.com/docs)
 * [PostgreSQL](https://www.postgresql.org/)
 
+
 * [laravel/laravel](https://github.com/laravel/laravel)
 * [laravel/socialite](https://github.com/laravel/socialite)
-* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
+* [beyondcode/laravel-self-diagnosis](https://github.com/beyondcode/laravel-self-diagnosis)
+* [beyondcode/laravel-view-xray](https://github.com/beyondcode/laravel-view-xray)
 * [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
+* [z-song/laravel-admin](https://github.com/z-song/redis-manager)
 
 
-https://code.tutsplus.com/articles/20-useful-laravel-packages-available-on-codecanyon--cms-25334
 
 :cat2:
