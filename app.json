@@ -17,6 +17,13 @@
         "pr-predestroy":"echo 'Yo_predestroy' ; bash app.sh teardown >> app.log ; "
     },
     "env": {
+        "APP_KEY": {
+            "description": "Digite o resultado do próximo comando 'php artisan --no-ansi key:generate --show'",
+            "required": true
+        },
+        "APP_URL": {
+            "required": true
+        },
         "SECRET_TOKEN":{
             "description":"A secret key for verifying the integrity of signed cookies.",
             "generator":"secret"
