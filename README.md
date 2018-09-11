@@ -16,7 +16,7 @@ Evangelizar o framework [Laravel](https://laravel.com/)
 
 ## Característica técnica
 
-Para o aplicativo o Heroku usa o arquvo [app.json](app.json)
+Para o aplicativo o Heroku usa o arquvo [app.json](https://devcenter.heroku.com/articles/app-json-schema)
 
 Para a implantação o Heroku usa o arquvo [composer.json](composer.json)
 
@@ -29,6 +29,8 @@ Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as depe
 ## Implantando na Heroku
 
 Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
+
+Com o conceito de [PaaS "Platform as a Service"](https://pt.wikipedia.org/wiki/Plataforma_como_servi%C3%A7o), no uso do [Heroku](https://www.heroku.com/) você tem ZERO preocupação sobre o ambiente, servidor, configurações, etc. Simplesmente você sobe a aplicação e está tudo rodando.
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-laravel)
 
