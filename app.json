@@ -61,11 +61,6 @@
             "value": "stack",
             "required": true
         },
-        "DB_DATABASE": {
-            "description": "-",
-            "value": "homestead",
-            "required": true
-        },
         "DB_USERNAME": {
             "description": "-",
             "value": "homestead",
