@@ -18,7 +18,8 @@
     },
     "env": {
         "APP_ENV": {
-            "description": "Digite 'local'",
+            "description": "-",
+            "value": "local",
             "required": false
         },
         "APP_KEY": {
