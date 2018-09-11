@@ -1,0 +1,70 @@
+{
+    "name":"@mozg/heroku-laravel",
+    "description":"Laravel App",
+    "keywords":[
+        "app.json",
+        "laravel",
+        "heroku",
+        "mozg",
+        "brasil"
+    ],
+    "website":"http://mozg.com.br/",
+    "repository":"https://github.com/mozgbrasil/heroku-node",
+    "logo":"http://mozg.com.br/assets/images/logos/logo.svg",
+    "success_url":"/",
+    "scripts":{
+        "postdeploy":"echo 'Yo_postdeploy' ; bash app.sh postdeploy >> app.log ; php artisan postdeploy:heroku ; ",
+        "pr-predestroy":"echo 'Yo_predestroy' ; bash app.sh teardown >> app.log ; "
+    },
+    "env": {
+        "APP_DEBUG": {
+            "required": false
+        },
+        "APP_ENV": {
+            "required": false
+        },
+        "APP_KEY": {
+            "description": "Digite o resultado do próximo comando 'php artisan --no-ansi key:generate --show'",
+            "required": true
+        },
+        "APP_URL": {
+            "required": true
+        },
+        "CACHE_DRIVER": {
+            "required": true
+        },
+        "QUEUE_DRIVER": {
+            "required": true
+        },
+        "SESSION_DRIVER": {
+            "required": true
+        },
+        "EMAIL":{
+            "required":true
+        },
+        "SECRET_TOKEN":{
+            "description":"A secret key for verifying the integrity of signed cookies.",
+            "generator":"secret"
+        }
+    },
+    "image":"heroku/php",
+    "addons": [
+      "heroku-postgresql:hobby-dev",
+      "heroku-redis:hobby-dev"
+    ],
+    "buildpacks": [
+      {
+        "url": "heroku/php"
+      },
+      {
+        "url": "heroku/nodejs"
+      }
+    ],
+    "environments":{
+        "test":{
+            "scripts":{
+                "test":"echo 'Yo_environments' ; bash app.sh environments >> app.log ; "
+            }
+        }
+    }
+}
