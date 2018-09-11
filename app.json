@@ -110,7 +110,7 @@
             "description": "-",
             "value": "6379",
             "required": true
-        },
+        }
     },
     "image":"heroku/php",
     "addons": [
