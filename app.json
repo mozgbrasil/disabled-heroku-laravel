@@ -18,8 +18,7 @@
     },
     "env": {
         "APP_ENV": {
-            "description": "-",
-            "value": "local",
+            "description": "Digite 'local'",
             "required": false
         },
         "APP_KEY": {
@@ -27,89 +26,36 @@
             "required": true
         },
         "APP_DEBUG": {
-            "description": "-",
-            "value": "true",
+            "description": "Digite 'true'",
             "required": false
         },
         "APP_URL": {
-            "description": "-",
-            "value": "https://app-murphy.herokuapp.com/",
-            "required": true
-        },
-        "LOG_CHANNEL": {
-            "description": "-",
-            "value": "stack",
-            "required": true
-        },
-        "DB_CONNECTION": {
-            "description": "-",
-            "value": "mysql",
-            "required": true
-        },
-        "DB_HOST": {
-            "description": "-",
-            "value": "127.0.0.1",
-            "required": true
-        },
-        "DB_PORT": {
-            "description": "-",
-            "value": "3306",
-            "required": true
-        },
-        "DB_DATABASE": {
-            "description": "-",
-            "value": "stack",
-            "required": true
-        },
-        "DB_USERNAME": {
-            "description": "-",
-            "value": "homestead",
-            "required": true
-        },
-        "DB_PASSWORD": {
-            "description": "-",
-            "value": "secret",
-            "required": true
-        },
-        "BROADCAST_DRIVER": {
-            "description": "-",
-            "value": "log",
+            "description": "Digite 'https://murphy.herokuapp.com/'",
             "required": true
         },
         "CACHE_DRIVER": {
             "description": "-",
-            "value": "file",
+            "value": "5",
             "required": true
         },
-        "QUEUE_CONNECTION": {
+        "QUEUE_DRIVER": {
             "description": "-",
-            "value": "sync",
+            "value": "5",
             "required": true
         },
         "SESSION_DRIVER": {
             "description": "-",
-            "value": "file",
+            "value": "5",
             "required": true
         },
-        "SESSION_LIFETIME": {
+        "EMAIL":{
             "description": "-",
-            "value": "120",
-            "required": true
+            "value": "0@0.com",
+            "required":true
         },
-        "REDIS_HOST": {
-            "description": "-",
-            "value": "127.0.0.1",
-            "required": true
-        },
-        "REDIS_PASSWORD": {
-            "description": "-",
-            "value": "null",
-            "required": true
-        },
-        "REDIS_PORT": {
-            "description": "-",
-            "value": "6379",
-            "required": true
+        "SECRET_TOKEN":{
+            "description":"A secret key for verifying the integrity of signed cookies.",
+            "generator":"secret"
         }
     },
     "image":"heroku/php",
