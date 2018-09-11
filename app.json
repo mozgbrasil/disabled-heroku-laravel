@@ -43,7 +43,7 @@
         },
         "DB_CONNECTION": {
             "description": "-",
-            "value": "mysql",
+            "value": "pgsql",
             "required": true
         },
         "DB_HOST": {
@@ -53,7 +53,7 @@
         },
         "DB_PORT": {
             "description": "-",
-            "value": "3306",
+            "value": "5432",
             "required": true
         },
         "DB_DATABASE": {

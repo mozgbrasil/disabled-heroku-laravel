@@ -45,7 +45,7 @@ Em seguida você pode fazer um fork desse repositório e fazer as alterações n
 Certifique-se de utilizar um ambiente com os requerimentos recomendados como descrito na documentação [Laravel Docs](https://laravel.com/docs/5.7)
 
 ```
-git clone git@github.com:mozgbrasil/laravel-murphy.git
+git clone git@github.com:mozgbrasil/heroku-laravel.git
 ```
 
 ## Criando link symbolico local para uso no Devilbox
@@ -53,7 +53,7 @@ git clone git@github.com:mozgbrasil/laravel-murphy.git
 ```
 cd ~/dados/mount/www/localhost/htdocs
 
-ln -s /home/marcio/dados/git/projects/laravel-murphy
+ln -s /home/marcio/dados/git/projects/heroku-laravel
 ```
 
 ## Executando no Devilbox
@@ -63,7 +63,7 @@ cd ~/dados/dockers/devilbox
 
 ./shell.sh
 
-cd localhost/htdocs/laravel-murphy
+cd localhost/htdocs/heroku-laravel
 
 php -v
 
@@ -203,6 +203,7 @@ https://laracasts.com/series/laravel-from-scratch-2017
 * [PHP-FPM](http://php-fpm.org/)
 * [PHP](http://php.net)
 * [Laravel](http://laravel.com/docs)
+* [PostgreSQL](https://www.postgresql.org/)
 
 * [laravel/laravel](https://github.com/laravel/laravel)
 * [laravel/socialite](https://github.com/laravel/socialite)
