@@ -12,7 +12,7 @@ Automações usando [Laravel](https://laravel.com/)
 
 ## Motivação
 
-Evangelizar o framework [Laravel](https://laravel.com/)
+Evangelizar o uso do Framework [Laravel](https://laravel.com/)
 
 ## Característica técnica
 
@@ -22,15 +22,11 @@ Para a implantação o Heroku usa o arquvo [composer.json](composer.json)
 
 Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as dependências a ser usada no projeto está registrada no arquivo [composer.json](composer.json)
 
-## Descrição
-
-++
-
 ## Implantando na Heroku
 
-Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
-
 Com o conceito de [PaaS "Platform as a Service"](https://pt.wikipedia.org/wiki/Plataforma_como_servi%C3%A7o), no uso do [Heroku](https://www.heroku.com/) você tem ZERO preocupação sobre o ambiente, servidor, configurações, etc. Simplesmente você sobe a aplicação e está tudo rodando.
+
+Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mozgbrasil/heroku-laravel)
 
@@ -82,27 +78,74 @@ Deve ser usado qualquer um dos comandos a seguir para a criação de uma nova ap
 Dessa forma deve ser feito o clone do repositório https://github.com/laravel/laravel
 
 ```
-laravel new app-murphy
+laravel new heroku-laravel
 
     ou
 
-composer create-project --prefer-dist laravel/laravel app-murphy
+composer create-project --prefer-dist laravel/laravel heroku-laravel
 ```
 
-x
+Possibilidades de implementação ao projeto
 
 ```
 
-cd app-murphy
+cd heroku-laravel
+
+# Database -> DROP | CREATE
+
+mysqladmin -h 'mysql' -u root -p CREATE "heroku-laravel"
+
+mysql -h 'mysql' -u 'root' -p 'heroku-laravel' -e "\
+   SHOW TABLES; \
+"
+
+## Update Database Enviroment
+
+nano .env
+
+## artisan make
 
 php artisan make:auth
 
 ## FIX: Specified key was too long
 ## https://laravel-news.com/laravel-5-4-key-too-long-error
 
-php artisan key:generate
+## artisan migrate
 
 php artisan migrate
+
+## Library
+
+### Install
+
+composer require barryvdh/laravel-debugbar --dev
+
+### Then run these commands to publish assets and config
+
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
+### Install
+
+composer require encore/laravel-admin
+
+### Then run these commands to publish assets and config
+
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+
+### Finish install
+
+php artisan admin:install
+
+### Install
+
+composer require laravel/socialite
+
+###  Configure
+
+https://laravel.com/docs/5.7/socialite#configuration
+
+
+## npm
 
 npm install
 
@@ -112,9 +155,13 @@ npm run dev
 
 ## Sobre o aplicativo para o Heroku
 
-Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-laravel](https://github.com/mozgbrasil/heroku-laravel), qualquer contribuição é bem vinda.
+Esse aplicativo foi desenvolvido por [Marcio dos Santos Amorim](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-laravel](https://github.com/mozgbrasil/heroku-laravel), qualquer contribuição é bem vinda.
 
-# Considerações
+## Perguntas mais frequentes "FAQ"
+
+### Sugestões importante
+
+## Considerações
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
 
@@ -151,19 +198,18 @@ https://laracasts.com/series/laravel-from-scratch-2017
 
 ## Especificações técnicas
 
-* [PHP-FPM](http://php-fpm.org/)
-* [Nginx](https://www.nginx.com/)
-* [PHP](http://php.net)
-* [Laravel 5](http://laravel.com/docs)
 * [Heroku](https://www.heroku.com/)
-* [Foundation 5](http://foundation.zurb.com/)
-* [SASS](http://sass-lang.com/)
-* [React](https://facebook.github.io/react/)
-* [Node.js](https://nodejs.org/)
-* [Grunt](http://gruntjs.com/)
-* [Bower](http://bower.io/)
-* [Babel](https://babeljs.io/)
-* [WebPack](http://webpack.github.io/)
-* [PurifyCSS](https://github.com/purifycss/purifycss)
+* [Nginx](https://www.nginx.com/)
+* [PHP-FPM](http://php-fpm.org/)
+* [PHP](http://php.net)
+* [Laravel](http://laravel.com/docs)
+
+* [laravel/laravel](https://github.com/laravel/laravel)
+* [laravel/socialite](https://github.com/laravel/socialite)
+* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
+* [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+
+
+https://code.tutsplus.com/articles/20-useful-laravel-packages-available-on-codecanyon--cms-25334
 
 :cat2:

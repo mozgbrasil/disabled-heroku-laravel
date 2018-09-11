@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Auth
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// Socialite
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');

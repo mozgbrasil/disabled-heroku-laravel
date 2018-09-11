@@ -33,7 +33,7 @@
         },
         "APP_URL": {
             "description": "-",
-            "value": "https://app-murphy.herokuapp.com/",
+            "value": "https://laravel-murphy.herokuapp.com/",
             "required": true
         },
         "LOG_CHANNEL": {
@@ -113,7 +113,7 @@
         },
         "EMAIL":{
             "description": "-",
-            "value": "0@0.com",
+            "value": "",
             "required":true
         },
         "SECRET_TOKEN":{
