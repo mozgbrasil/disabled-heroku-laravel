@@ -12,7 +12,6 @@ Automações usando [Laravel 5.7](https://laravel.com/)
 
 A seguir alguns controles
 
-```
 http://heroku-laravel-mozg.herokuapp.com/
 
 http://heroku-laravel-mozg.herokuapp.com/admin/
@@ -24,8 +23,6 @@ http://heroku-laravel-mozg.herokuapp.com/redis-manager/
 http://heroku-laravel-mozg.herokuapp.com/redis-manager/api/scan?pattern=*&conn=default
 
 http://heroku-laravel-mozg.herokuapp.com/scaffold/
-
-```
 
 ## Motivação
 
@@ -278,6 +275,26 @@ Esse aplicativo foi desenvolvido por [Marcio dos Santos Amorim](http://mozg.com.
 
 ### Sugestões importante
 
+## Especificações técnicas
+
+* [Heroku](https://www.heroku.com/)
+* [Nginx](https://www.nginx.com/)
+* [PHP-FPM](http://php-fpm.org/)
+* [PHP](http://php.net)
+* [Laravel](http://laravel.com/docs)
+* [PostgreSQL](https://www.postgresql.org/)
+
+
+* [laravel/laravel](https://github.com/laravel/laravel)
+* [laravel/socialite](https://github.com/laravel/socialite)
+* [beyondcode/laravel-self-diagnosis](https://github.com/beyondcode/laravel-self-diagnosis)
+* [beyondcode/laravel-view-xray](https://github.com/beyondcode/laravel-view-xray)
+* [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
+* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
+* [z-song/redis-manager](https://github.com/z-song/redis-manager)
+* [gpressutto5/laravel-slack](https://github.com/gpressutto5/laravel-slack)
+* [amranidev/scaffold-interface](https://github.com/amranidev/scaffold-interface)
+
 ## Considerações
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
@@ -314,27 +331,6 @@ https://laravel.com/
 https://laracasts.com/series/laravel-from-scratch-2017
 
 https://github.com/chiraggude/awesome-laravel#awesome-laravel--
-
-## Especificações técnicas
-
-* [Heroku](https://www.heroku.com/)
-* [Nginx](https://www.nginx.com/)
-* [PHP-FPM](http://php-fpm.org/)
-* [PHP](http://php.net)
-* [Laravel](http://laravel.com/docs)
-* [PostgreSQL](https://www.postgresql.org/)
-
-
-* [laravel/laravel](https://github.com/laravel/laravel)
-* [laravel/socialite](https://github.com/laravel/socialite)
-* [beyondcode/laravel-self-diagnosis](https://github.com/beyondcode/laravel-self-diagnosis)
-* [beyondcode/laravel-view-xray](https://github.com/beyondcode/laravel-view-xray)
-* [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
-* [z-song/redis-manager](https://github.com/z-song/redis-manager)
-* [gpressutto5/laravel-slack](https://github.com/gpressutto5/laravel-slack)
-* [amranidev/scaffold-interface](https://github.com/amranidev/scaffold-interface)
-
 
 
 :cat2:
