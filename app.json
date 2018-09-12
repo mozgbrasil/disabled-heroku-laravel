@@ -101,14 +101,19 @@
             "value": "127.0.0.1",
             "required": true
         },
-        "REDIS_PASSWORD": {
+        "REDIS_PORT": {
+            "description": "-",
+            "value": "6379",
+            "required": true
+        },
+        "REDIS_USER": {
             "description": "-",
             "value": "null",
             "required": true
         },
-        "REDIS_PORT": {
+        "REDIS_PASSWORD": {
             "description": "-",
-            "value": "6379",
+            "value": "null",
             "required": true
         },
         "EMAIL":{

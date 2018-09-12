@@ -8,7 +8,24 @@
 
 ## Sinopse
 
-Automações usando [Laravel](https://laravel.com/)
+Automações usando [Laravel 5.7](https://laravel.com/)
+
+A seguir alguns controles
+
+```
+http://heroku-laravel-mozg.herokuapp.com/
+
+http://heroku-laravel-mozg.herokuapp.com/admin/
+
+    admin / admin
+
+http://heroku-laravel-mozg.herokuapp.com/redis-manager/
+
+http://heroku-laravel-mozg.herokuapp.com/redis-manager/api/scan?pattern=*&conn=default
+
+http://heroku-laravel-mozg.herokuapp.com/scaffold/
+
+```
 
 ## Motivação
 
@@ -43,10 +60,6 @@ Em seguida você pode fazer um fork desse repositório e fazer as alterações n
 ## Executando Localmente
 
 Certifique-se de utilizar um ambiente com os requerimentos recomendados como descrito na documentação [Laravel Docs](https://laravel.com/docs/5.7)
-
-```
-git clone git@github.com:mozgbrasil/heroku-laravel.git
-```
 
 ## Criando link symbolico local para uso no Devilbox
 
@@ -114,7 +127,12 @@ php artisan make:auth
 
 php artisan migrate
 
+```
+
 ## Library
+
+```
+
 
 ### Install
 
@@ -124,6 +142,10 @@ composer require laravel/socialite
 
 https://laravel.com/docs/5.7/socialite#configuration
 
+```
+
+```
+
 ### Install
 
 composer require beyondcode/laravel-self-diagnosis
@@ -132,15 +154,24 @@ composer require beyondcode/laravel-self-diagnosis
 
 php artisan self-diagnosis
 
+```
+
+```
+
 ### Install
 
 composer require beyondcode/laravel-view-xray --dev
 
 ### If you are using Laravel 5.5+, the package will automatically register the service provider for you.
 ### By default, the package will automatically detect all models in your app directory that extend the Eloquent Model class. If you would like you explicitly define where your models are located, you can publish the configuration file using the following command.
+
 ### Publish assets and config
 
 php artisan vendor:publish --provider=BeyondCode\\ViewXray\\ViewXrayServiceProvider
+
+```
+
+```
 
 ### Install
 
@@ -149,6 +180,10 @@ composer require barryvdh/laravel-debugbar --dev
 ### Publish assets and config
 
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
+```
+
+```
 
 ### Install
 
@@ -162,9 +197,17 @@ php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
 
 php artisan admin:install
 
+```
+
+```
+
 ### Install
 
 composer require beyondcode/laravel-inline-translation --dev
+
+```
+
+```
 
 ### Install
 
@@ -174,6 +217,41 @@ composer require encore/redis-manager
 
 php artisan vendor:publish --provider="Encore\RedisManager\RedisManagerServiceProvider"
 
+```
+
+```
+
+### Install
+
+composer require amranidev/scaffold-interface
+
+### Publish assets and config
+
+php artisan vendor:publish
+
+### Run migrations:
+
+php artisan migrate
+
+### Authentication scaffolding:
+
+php artisan make:auth
+
+```
+
+```
+
+### Install
+
+composer require gpressutto5/laravel-slack
+
+### Publish assets and config
+
+php artisan vendor:publish --provider="Pressutto\LaravelSlack\ServiceProvider"
+
+```
+
+```
 
 ## npm
 
@@ -183,15 +261,14 @@ npm run dev
 
 ```
 
-A seguir alguns controles
+A seguir testes unitarios
 
-http://heroku-laravel-mozg.herokuapp.com/
+```
 
-http://heroku-laravel-mozg.herokuapp.com/admin/
+php artisan make:test ViewTest
 
-    admin / admin
+```
 
-http://heroku-laravel-mozg.herokuapp.com/redis-manager/
 
 ## Sobre o aplicativo para o Heroku
 
@@ -254,7 +331,9 @@ https://github.com/chiraggude/awesome-laravel#awesome-laravel--
 * [beyondcode/laravel-view-xray](https://github.com/beyondcode/laravel-view-xray)
 * [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
 * [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
-* [z-song/laravel-admin](https://github.com/z-song/redis-manager)
+* [z-song/redis-manager](https://github.com/z-song/redis-manager)
+* [gpressutto5/laravel-slack](https://github.com/gpressutto5/laravel-slack)
+* [amranidev/scaffold-interface](https://github.com/amranidev/scaffold-interface)
 
 
 

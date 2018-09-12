@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Slack
+
+//\Slack::to('@mozgbrasil')->send("1939");
+
 // Auth
 Auth::routes();
 
@@ -23,3 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Socialite
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
 Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
