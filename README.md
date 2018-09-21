@@ -8,7 +8,7 @@
 
 ## Sinopse
 
-Automações usando [Laravel 5.7](https://laravel.com/)
+Automações usando [Laravel](https://laravel.com/)
 
 A seguir alguns controles
 
@@ -20,13 +20,11 @@ http://heroku-laravel-mozg.herokuapp.com/admin/
 
 http://heroku-laravel-mozg.herokuapp.com/redis-manager/
 
-http://heroku-laravel-mozg.herokuapp.com/redis-manager/api/scan?pattern=*&conn=default
-
 http://heroku-laravel-mozg.herokuapp.com/scaffold/
 
 ## Motivação
 
-Evangelizar o uso do Framework [Laravel](https://laravel.com/)
+Evangelizar o uso do [PHP](http://php.net) e Framework [Laravel](https://laravel.com/)
 
 ## Característica técnica
 
@@ -98,7 +96,6 @@ composer create-project --prefer-dist laravel/laravel heroku-laravel
 Possibilidades de implementação ao projeto
 
 ```
-
 cd heroku-laravel
 
 # Database -> DROP | CREATE
@@ -113,7 +110,15 @@ mysql -h 'mysql' -u 'root' -p 'heroku-laravel' -e "\
 
 nano .env
 
-## artisan make
+
+```
+
+## Library
+
+https://laravel.com/docs/master/authentication
+
+```
+### Install
 
 php artisan make:auth
 
@@ -124,13 +129,30 @@ php artisan make:auth
 
 php artisan migrate
 
-```
-
-## Library
+...
 
 ```
 
+https://github.com/laravel/passport
 
+```
+### Install
+
+composer require laravel/passport
+
+###  Configure
+
+php artisan migrate
+
+php artisan passport:install
+
+...
+
+```
+
+https://github.com/laravel/socialite
+
+```
 ### Install
 
 composer require laravel/socialite
@@ -138,11 +160,12 @@ composer require laravel/socialite
 ###  Configure
 
 https://laravel.com/docs/5.7/socialite#configuration
-
 ```
 
-```
+https://github.com/beyondcode/laravel-self-diagnosis
 
+
+```
 ### Install
 
 composer require beyondcode/laravel-self-diagnosis
@@ -150,11 +173,11 @@ composer require beyondcode/laravel-self-diagnosis
 ### Usage
 
 php artisan self-diagnosis
-
 ```
 
-```
+https://github.com/beyondcode/laravel-view-xray
 
+```
 ### Install
 
 composer require beyondcode/laravel-view-xray --dev
@@ -165,11 +188,11 @@ composer require beyondcode/laravel-view-xray --dev
 ### Publish assets and config
 
 php artisan vendor:publish --provider=BeyondCode\\ViewXray\\ViewXrayServiceProvider
-
 ```
 
-```
+https://github.com/barryvdh/laravel-debugbar
 
+```
 ### Install
 
 composer require barryvdh/laravel-debugbar --dev
@@ -177,11 +200,11 @@ composer require barryvdh/laravel-debugbar --dev
 ### Publish assets and config
 
 php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
-
 ```
 
-```
+https://github.com/z-song/laravel-admin
 
+```
 ### Install
 
 composer require encore/laravel-admin
@@ -193,19 +216,19 @@ php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
 ### Finish install
 
 php artisan admin:install
-
 ```
 
-```
+https://github.com/beyondcode/laravel-inline-translation
 
+```
 ### Install
 
 composer require beyondcode/laravel-inline-translation --dev
-
 ```
 
-```
+https://github.com/z-song/redis-manager
 
+```
 ### Install
 
 composer require encore/redis-manager
@@ -213,11 +236,11 @@ composer require encore/redis-manager
 ### Publish assets and config
 
 php artisan vendor:publish --provider="Encore\RedisManager\RedisManagerServiceProvider"
-
 ```
 
-```
+https://github.com/amranidev/scaffold-interface
 
+```
 ### Install
 
 composer require amranidev/scaffold-interface
@@ -233,11 +256,11 @@ php artisan migrate
 ### Authentication scaffolding:
 
 php artisan make:auth
-
 ```
 
-```
+https://github.com/gpressutto5/laravel-slack
 
+```
 ### Install
 
 composer require gpressutto5/laravel-slack
@@ -245,20 +268,35 @@ composer require gpressutto5/laravel-slack
 ### Publish assets and config
 
 php artisan vendor:publish --provider="Pressutto\LaravelSlack\ServiceProvider"
-
 ```
 
+https://github.com/beyondcode/laravel-er-diagram-generator
+
+```
+### Install
+
+composer require beyondcode/laravel-er-diagram-generator --dev
+
+### Publish assets and config
+
+php artisan vendor:publish --provider=BeyondCode\\ErdGenerator\\ErdGeneratorServiceProvider
+
+### Generating Diagrams
+
+php artisan generate:erd
 ```
 
+NPM
+
+```
 ## npm
 
 npm install
 
 npm run dev
-
 ```
 
-A seguir testes unitarios
+Testes unitários
 
 ```
 
@@ -275,30 +313,9 @@ Esse aplicativo foi desenvolvido por [Marcio dos Santos Amorim](http://mozg.com.
 
 ### Sugestões importante
 
-## Especificações técnicas
-
-* [Heroku](https://www.heroku.com/)
-* [Nginx](https://www.nginx.com/)
-* [PHP-FPM](http://php-fpm.org/)
-* [PHP](http://php.net)
-* [Laravel](http://laravel.com/docs)
-* [PostgreSQL](https://www.postgresql.org/)
-
-
-* [laravel/laravel](https://github.com/laravel/laravel)
-* [laravel/socialite](https://github.com/laravel/socialite)
-* [beyondcode/laravel-self-diagnosis](https://github.com/beyondcode/laravel-self-diagnosis)
-* [beyondcode/laravel-view-xray](https://github.com/beyondcode/laravel-view-xray)
-* [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar)
-* [z-song/laravel-admin](https://github.com/z-song/laravel-admin)
-* [z-song/redis-manager](https://github.com/z-song/redis-manager)
-* [gpressutto5/laravel-slack](https://github.com/gpressutto5/laravel-slack)
-* [amranidev/scaffold-interface](https://github.com/amranidev/scaffold-interface)
-
 ## Considerações
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
-
 - [![pagseguro](https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/164x37-doar-assina.gif)](https://pagseguro.uol.com.br/checkout/v2/donation.html?currency=BRL&receiverEmail=mozgbrasil@gmail.com)
 - [![Star on GitHub](https://img.shields.io/github/stars/mozgbrasil/heroku-laravel.svg?style=social)](https://github.com/mozgbrasil/heroku-laravel/stargazers)
 - [![Watch on GitHub](https://img.shields.io/github/watchers/mozgbrasil/heroku-laravel.svg?style=social)](https://github.com/mozgbrasil/heroku-laravel/watchers)
